@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Test - BATIK SEMARANG</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 2rem;
+        }
+
+        .test-section {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: #f9f9f9;
+            border-radius: 10px;
+        }
+
+        .test-section h2 {
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+
+        button {
+            padding: 12px 24px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            transition: transform 0.3s;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+        }
+
+        .result {
+            margin-top: 1rem;
+            padding: 1rem;
+            background: white;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+            white-space: pre-wrap;
+            font-family: monospace;
+            font-size: 14px;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        .success {
+            border-left-color: #4CAF50;
+            background: #e8f5e9;
+        }
+
+        .error {
+            border-left-color: #f44336;
+            background: #ffebee;
+        }
+
+        .info {
+            padding: 1rem;
+            background: #e3f2fd;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            border-left: 4px solid #2196F3;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 1rem;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔧 API Testing Tool</h1>
+        
+        <div class="info">
+            <strong>ℹ️ Informasi:</strong><br>
+            Tool ini digunakan untuk testing API endpoints. Pastikan XAMPP (Apache + MySQL) sudah running sebelum melakukan test.
+        </div>
+
+        <!-- Database Connection Test -->
+        <div class="test-section">
+            <h2>1. Test Database Connection</h2>
+            <p>Test koneksi ke database MySQL</p>
+            <button onclick="testDatabase()">Test Database</button>
+            <div id="dbResult" class="result" style="display: none;"></div>
+        </div>
+
+        <!-- Login Test -->
+        <div class="test-section">
+            <h2>2. Test Login API</h2>
+            <p>Test login dengan akun default (<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="542031272014312c35392438317a373b39">[email&#160;protected]</a> / 123456)</p>
+            <button onclick="testLogin()">Test Login</button>
+            <button onclick="testLoginFail()">Test Login (Wrong Password)</button>
+            <div id="loginResult" class="result" style="display: none;"></div>
+        </div>
+
+        <!-- Register Test -->
+        <div class="test-section">
+            <h2>3. Test Register API</h2>
+            <p>Test registrasi user baru</p>
+            <button onclick="testRegister()">Test Register</button>
+            <div id="registerResult" class="result" style="display: none;"></div>
+        </div>
+
+        <!-- File Structure Test -->
+        <div class="test-section">
+            <h2>4. Test File Structure</h2>
+            <p>Verifikasi struktur file dan path</p>
+            <button onclick="testFileStructure()">Check Files</button>
+            <div id="fileResult" class="result" style="display: none;"></div>
+        </div>
+
+        <a href="index.html" class="back-link">← Kembali ke Home</a>
+    </div>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        function showResult(elementId, message, type = 'info') {
+            const element = document.getElementById(elementId);
+            element.textContent = message;
+            element.className = `result ${type}`;
+            element.style.display = 'block';
+        }
+
+        async function testDatabase() {
+            showResult('dbResult', 'Testing database connection...', 'info');
+            
+            try {
+                const response = await fetch('api/Login.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        email: 'test@example.com',
+                        password: '123456'
+                    })
+                });
+
+                if (response.ok) {
+                    showResult('dbResult', '✅ Database connection successful!\n\nResponse status: ' + response.status, 'success');
+                } else {
+                    showResult('dbResult', '❌ Database connection failed!\n\nResponse status: ' + response.status, 'error');
+                }
+            } catch (error) {
+                showResult('dbResult', '❌ Error connecting to database:\n\n' + error.message + '\n\nPastikan Apache dan MySQL di XAMPP sudah running!', 'error');
+            }
+        }
+
+        async function testLogin() {
+            showResult('loginResult', 'Testing login API...', 'info');
+            
+            try {
+                const response = await fetch('api/Login.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        email: 'test@example.com',
+                        password: '123456'
+                    })
+                });
+
+                const result = await response.json();
+                
+                if (result.success) {
+                    showResult('loginResult', '✅ Login successful!\n\n' + JSON.stringify(result, null, 2), 'success');
+                } else {
+                    showResult('loginResult', '❌ Login failed!\n\n' + JSON.stringify(result, null, 2), 'error');
+                }
+            } catch (error) {
+                showResult('loginResult', '❌ Error:\n\n' + error.message, 'error');
+            }
+        }
+
+        async function testLoginFail() {
+            showResult('loginResult', 'Testing login with wrong password...', 'info');
+            
+            try {
+                const response = await fetch('api/Login.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        email: 'test@example.com',
+                        password: 'wrongpassword'
+                    })
+                });
+
+                const result = await response.json();
+                
+                if (!result.success) {
+                    showResult('loginResult', '✅ Validation working correctly!\n\nError message: ' + result.message, 'success');
+                } else {
+                    showResult('loginResult', '❌ Validation not working!\n\n' + JSON.stringify(result, null, 2), 'error');
+                }
+            } catch (error) {
+                showResult('loginResult', '❌ Error:\n\n' + error.message, 'error');
+            }
+        }
+
+        async function testRegister() {
+            showResult('registerResult', 'Testing register API...', 'info');
+            
+            const randomEmail = 'test' + Date.now() + '@example.com';
+            
+            try {
+                const response = await fetch('api/register.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        nama: 'Test User',
+                        email: randomEmail,
+                        password: '123456'
+                    })
+                });
+
+                const result = await response.json();
+                
+                if (result.success) {
+                    showResult('registerResult', '✅ Registration successful!\n\nEmail: ' + randomEmail + '\n\n' + JSON.stringify(result, null, 2), 'success');
+                } else {
+                    showResult('registerResult', '❌ Registration failed!\n\n' + JSON.stringify(result, null, 2), 'error');
+                }
+            } catch (error) {
+                showResult('registerResult', '❌ Error:\n\n' + error.message, 'error');
+            }
+        }
+
+        function testFileStructure() {
+            showResult('fileResult', 'Checking file structure...', 'info');
+            
+            const files = [
+                'api/Login.php',
+                'api/register.php',
+                'api/logout.php',
+                'config/database.php',
+                'includes/functions.php',
+                'index.html',
+                'login.html',
+                'product-detail.html',
+                'dashboard.php'
+            ];
+
+            let result = '📁 File Structure Check:\n\n';
+            result += 'Expected files:\n';
+            files.forEach(file => {
+                result += `✓ ${file}\n`;
+            });
+
+            result += '\n⚠️ Note: This is a static check. To verify files exist, check manually in your folder.';
+            result += '\n\nExpected folder structure:';
+            result += '\nhtdocs/';
+            result += '\n└── DB_UMKM/';
+            result += '\n    ├── api/';
+            result += '\n    ├── config/';
+            result += '\n    ├── includes/';
+            result += '\n    ├── assets/';
+            result += '\n    └── ... (other files)';
+
+            showResult('fileResult', result, 'success');
+        }
+    </script>
+</body>
+</html>

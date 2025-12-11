@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BATIK SEMARANG</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="logo 1.png">
+</head>
+
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo-wrap">
+                <a href="index.html">
+                    <img src="logo 1.png" alt="logo batik" class="logo">
+                </a>
+                <a href="index.html">
+                    <h1 class="logo-text">BATIK SEMARANG</h1>
+                </a>
+            </div>
+
+            <ul class="menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">Tentang Kami</a></li>
+                <li><a href="#products">Produk</a></li>
+                <li><a href="#gallery">Galeri</a></li>
+                <li><a href="#testimonials">Testimoni</a></li>
+                <li><a href="#contact">Kontak</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <a href="login.html"
+               aria-label="User Login Button"
+               tabindex="0"
+               role="button"
+               class="user-profile"
+            >
+            <div class="user-profile-inner">
+              <svg
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+              >
+              <g data-name="Layer 2" id="Layer_2">
+              <path
+                 d="m15.626 11.769a6 6 0 1 0 -7.252 0 9.008 9.008 0 0 0 -5.374 8.231 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 9.008 9.008 0 0 0 -5.374-8.231zm-7.626-4.769a4 4 0 1 1 4 4 4 4 0 0 1 -4-4zm10 14h-12a1 1 0 0 1 -1-1 7 7 0 0 1 14 0 1 1 0 0 1 -1 1z"
+              ></path>
+              </g>
+              </svg>
+              <p>Log In</p>
+            </div>
+            </a>
+        </nav>
+      </header>
+
+    <section id="home" class="hero fade-in">
+        <div class="hero-overlay"></div>
+        <div class="hero-content-wrapper container">
+            <div class="hero-content">
+                <h1 class="animate-text">Ciptakan Produk Lokal Berkualitas dari Kami untuk Anda</h1>
+                <p class="animate-text-delay">Kami menyediakan produk UMKM terbaik dengan bahan lokal, ramah lingkungan, dan harga bersahabat. Bergabunglah dengan ribuan pelanggan yang telah mempercayai kualitas produk kami.</p>
+                <div class="btn-group animate-btn">
+                    <a href="#products" class="btn-primary">Lihat Produk</a>
+                    <a href="#contact" class="btn-secondary">Hubungi Kami</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about fade-in">
+        <div class="about-content">
+            <div class="about-image">
+                <img src="foto tim.jpg" alt="Tim UMKM">
+            </div>
+            <div class="about-text">
+                <h2>Tentang Kami</h2>
+                <p>Kami adalah UMKM lokal yang telah berdiri sejak 2015, berkomitmen untuk menghasilkan produk berkualitas tinggi dari bahan-bahan terbaik. Dengan pengalaman lebih dari 8 tahun, kami telah melayani ribuan pelanggan di seluruh Indonesia.</p>
+                <p>Visi kami adalah menjadi produsen UMKM terdepan yang mengutamakan kualitas, keberlanjutan, dan kepuasan pelanggan. Setiap produk yang kami hasilkan melalui proses kontrol kualitas yang ketat untuk memastikan standar terbaik.</p>
+                <ul class="features">
+                    <li>Bahan lokal berkualitas premium</li>
+                    <li>Ramah lingkungan dan berkelanjutan</li>
+                    <li>Harga bersahabat dan kompetitif</li>
+                    <li>Pelayanan prima 24/7</li>
+                    <li>Garansi kepuasan 100%</li>
+                    <li>Pengiriman ke seluruh Indonesia</li>
+                </ul>
+                <div class="stats">
+                    <div class="stat-item">
+                        <h3>5000+</h3>
+                        <p>Pelanggan Puas</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>50+</h3>
+                        <p>Produk Unggulan</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>8+</h3>
+                        <p>Tahun Pengalaman</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="products" class="products container fade-in">
+        <h2>Produk Unggulan</h2>
+        <p class="section-subtitle">Temukan berbagai produk berkualitas tinggi yang kami tawarkan</p>
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-badge">Best Seller</div>
+                <div class="product-image">
+                    <img src="produk 1.jpg" alt="Produk 1" class="produk1">
+                </div>
+                <div class="product-info">
+                    <h3>Batik Pekalongan Premium</h3>
+                    <p class="product-price">Rp 150.000</p>
+                    <p class="product-desc">Batik eksklusif dengan detail sempurna, cocok untuk hadiah atau koleksi pribadi.</p>
+                    <div class="product-rating">★★★★★ (4.9)</div>
+                    <a href="product-detail.html?name=Batik Pekalongan Premium&price=150000" class="btn-primary">Lihat Detail</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-badge">New</div>
+                <div class="product-image">
+                    <img src="produk 1.jpg" alt="Produk 1">
+                </div>
+                <div class="product-info">
+                    <h3>Aksesoris Fashion Modern</h3>
+                    <p class="product-price">Rp 95.000</p>
+                    <p class="product-desc">Aksesoris fashion trendy dengan desain modern yang cocok untuk berbagai acara.</p>
+                    <div class="product-rating">★★★★★ (4.8)</div>
+                    <a href="product-detail.html?name=Aksesoris Fashion Modern&price=95000" class="btn-primary">Lihat Detail</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="produk 1.jpg" alt="Produk 1">
+                </div>
+                <div class="product-info">
+                    <h3>Produk Organik Alami</h3>
+                    <p class="product-price">Rp 120.000</p>
+                    <p class="product-desc">Produk organik 100% alami tanpa bahan kimia berbahaya, aman untuk keluarga.</p>
+                    <div class="product-rating">★★★★★ (5.0)</div>
+                    <a href="product-detail.html?name=Produk Organik Alami&price=120000" class="btn-primary">Lihat Detail</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="produk 1.jpg" alt="Produk 1">
+                </div>
+                <div class="product-info">
+                    <h3>Dekorasi Rumah Elegan</h3>
+                    <p class="product-price">Rp 180.000</p>
+                    <p class="product-desc">Dekorasi rumah dengan desain elegan yang memberikan sentuhan artistik pada ruangan Anda.</p>
+                    <div class="product-rating">★★★★☆ (4.7)</div>
+                    <a href="product-detail.html?name=Dekorasi Rumah Elegan&price=180000" class="btn-primary">Lihat Detail</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-badge">Hot</div>
+                <div class="product-image">
+                    <img src="produk 1.jpg" alt="Produk 1">
+                </div>
+                <div class="product-info">
+                    <h3>Gadget Accessories</h3>
+                    <p class="product-price">Rp 75.000</p>
+                    <p class="product-desc">Aksesoris gadget berkualitas tinggi dengan harga terjangkau untuk melindungi perangkat Anda.</p>
+                    <div class="product-rating">★★★★★ (4.9)</div>
+                    <a href="product-detail.html?name=Gadget Accessories&price=75000" class="btn-primary">Lihat Detail</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="produk 1.jpg" alt="Produk 1">
+                </div>
+                <div class="product-info">
+                    <h3>Sepatu Casual Premium</h3>
+                    <p class="product-price">Rp 250.000</p>
+                    <p class="product-desc">Sepatu casual dengan bahan premium yang nyaman digunakan untuk aktivitas sehari-hari.</p>
+                    <div class="product-rating">★★★★★ (4.8)</div>
+                    <a href="product-detail.html?name=Sepatu Casual Premium&price=250000" class="btn-primary">Lihat Detail</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery fade-in">
+        <h2>Galeri</h2>
+        <p class="section-subtitle">Lihat koleksi foto produk dan kegiatan kami</p>
+        <div class="container">
+            <div class="gallery-item">
+                <img src="toko.jpg" alt="Galeri 1">
+                <div class="gallery-overlay">
+                    <h4>Produk Display</h4>
+                    <p>Koleksi produk terbaru kami</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="toko.jpg" alt="Galeri 2">
+                <div class="gallery-overlay">
+                    <h4>Workshop</h4>
+                    <p>Proses pembuatan produk</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="toko.jpg" alt="Galeri 3">
+                <div class="gallery-overlay">
+                    <h4>Tim Kami</h4>
+                    <p>Kenalan dengan tim profesional</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="toko.jpg" alt="Galeri 4">
+                <div class="gallery-overlay">
+                    <h4>Event & Pameran</h4>
+                    <p>Kegiatan promosi produk</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="toko.jpg" alt="Galeri 5">
+                <div class="gallery-overlay">
+                    <h4>Customer Happy</h4>
+                    <p>Pelanggan puas dengan produk</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="toko.jpg" alt="Galeri 6">
+                <div class="gallery-overlay">
+                    <h4>Quality Control</h4>
+                    <p>Proses kontrol kualitas ketat</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="toko.jpg" alt="Galeri 7">
+                <div class="gallery-overlay">
+                    <h4>Packaging</h4>
+                    <p>Kemasan produk yang menarik</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="toko.jpg" alt="Galeri 8">
+                <div class="gallery-overlay">
+                    <h4>Delivery</h4>
+                    <p>Pengiriman cepat dan aman</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials container fade-in">
+        <h2>Testimoni Pelanggan</h2>
+        <p class="section-subtitle">Apa kata pelanggan tentang produk kami</p>
+        <div class="testimonial-slider">
+            <div class="testimonial-card active">
+                <img src="tes1.jpg" alt="Pelanggan 1">
+                <h4>Go Yoon Jung</h4>
+                <p class="customer-title">Pengusaha</p>
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"Produk sangat berkualitas dan pelayanan ramah! Saya sudah berlangganan selama 2 tahun dan tidak pernah kecewa. Pengiriman selalu tepat waktu dan produk sesuai ekspektasi."</p>
+            </div>
+            <div class="testimonial-card">
+                <img src="tes2.jpg" alt="Pelanggan 2">
+                <h4>Sultan Arab</h4>
+                <p class="customer-title">Ibu Rumah Tangga</p>
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"Rekomendasi untuk semua yang mencari produk lokal berkualitas. Harganya terjangkau dan kualitasnya tidak kalah dengan produk import. Sangat puas!"</p>
+            </div>
+            <div class="testimonial-card">
+                <img src="tes3.jpg" alt="Pelanggan 3">
+                <h4>Kang Ojek</h4>
+                <p class="customer-title">Karyawan Swasta</p>
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"Pelayanan customer service sangat responsif dan membantu. Produknya juga original dan berkualitas. Sudah beberapa kali order dan selalu memuaskan!"</p>
+            </div>
+            <div class="testimonial-card">
+                <img src="tes4.jpg" alt="Pelanggan 4">
+                <h4>Bu Juragan</h4>
+                <p class="customer-title">Mahasiswa</p>
+                <div class="stars">★★★★☆</div>
+                <p class="testimonial-text">"Harga terjangkau untuk mahasiswa seperti saya. Kualitas produk bagus dan packaging rapi. Akan order lagi untuk hadiah teman-teman saya."</p>
+            </div>
+        </div>
+        <div class="testimonial-nav">
+            <!-- Next Button (Kanan) -->
+            <button class="button" id="next-testimonial">
+                <div class="button-box">
+                    <span class="button-elem">
+                        <svg viewBox="0 0 46 40" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z"></path>
+                        </svg>
+                    </span>
+                    <span class="button-elem">
+                        <svg viewBox="0 0 46 40">
+                            <path d="M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z"></path>
+                        </svg>
+                    </span>
+                </div>
+            </button>
+
+            <!-- Previous Button (Kiri) -->
+            <button class="button" id="prev-testimonial">
+                <div class="button-box">
+                    <span class="button-elem">
+                        <svg viewBox="0 0 46 40" style="transform: rotate(180deg);">
+                            <path d="M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z"></path>
+                        </svg>
+                    </span>
+                    <span class="button-elem">
+                        <svg viewBox="0 0 46 40" style="transform: rotate(180deg);">
+                            <path d="M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z"></path>
+                        </svg>
+                    </span>
+                </div>
+            </button>
+        </div>
+    </section>
+
+    <section id="contact" class="contact fade-in">
+    <div class="container">
+        <div class="contact-content">
+            <div class="contact-form">
+                <h2>Hubungi Kami</h2>
+                <p>Ada pertanyaan? Jangan ragu untuk menghubungi kami. Tim kami siap membantu Anda!</p>
+                <form>
+                    <input type="text" placeholder="Nama Lengkap" required>
+                    <input type="email" placeholder="Email" required>
+                    <input type="tel" placeholder="Nomor Telepon" required>
+                    <input type="text" placeholder="Subjek" required>
+                    <textarea placeholder="Pesan Anda" rows="5" required></textarea>
+                    <button>
+                        <span class="circle1"></span>
+                        <span class="circle2"></span>
+                        <span class="circle3"></span>
+                        <span class="circle4"></span>
+                        <span class="circle5"></span>
+                        <span class="text">Submit</span>
+                    </button>
+                </form>
+            </div>
+
+            <div class="contact-info">
+                <h3>Informasi Kontak</h3>
+
+                <div class="info-item">
+                    <span class="icon">📍</span>
+                    <div>
+                        <h4>Alamat</h4>
+                        <p>Jl. Merdeka No. 123, Jakarta Pusat<br>DKI Jakarta, Indonesia 10110</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <span class="icon">📞</span>
+                    <div>
+                        <h4>Telepon</h4>
+                        <p>+62 812-3456-7890<br>+62 21-1234-5678</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <span class="icon">✉️</span>
+                    <div>
+                        <h4>Email</h4>
+                        <p>
+                            <a href="#"><span class="__cf_email__" data-cfemail="395c5458505508795c41585449555c175a5654">[email&#160;protected]</span></a><br>
+                            <a href="#"><span class="__cf_email__" data-cfemail="8eebe3efe7e2bcceebf6efe3fee2eba0ede1e3">[email&#160;protected]</span></a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <span class="icon">🕐</span>
+                    <div>
+                        <h4>Jam Operasional</h4>
+                        <p>Senin - Jumat: 08:00 - 17:00<br>Sabtu: 09:00 - 15:00<br>Minggu: Tutup</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-col">
+                <div class="logo-wrap">
+                    <img src="logo 1.png" alt="logo batik" class="logo">
+                </div>
+                <p>Produk lokal berkualitas untuk Indonesia yang lebih baik.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Link Cepat</h4>
+                <a href="#home">Home</a>
+                <a href="#about">Tentang Kami</a>
+                <a href="#products">Produk</a>
+                <a href="#gallery">Galeri</a>
+            </div>
+            <div class="footer-col">
+                <h4>Layanan</h4>
+                <a href="#testimonials">Testimoni</a>
+                <a href="#contact">Kontak</a>
+                <a href="#">FAQ</a>
+                <a href="#">Kebijakan Privasi</a>
+            </div>
+            <div class="footer-col">
+            <h4>Ikuti Kami</h4>
+            <div class="social-links">
+
+                 <!-- Instagram -->
+                <a href="#" title="Instagram">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+                </a>
+
+                <!-- Facebook -->
+                <a href="#" title="Facebook">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
+
+                    
+                </a>
+
+                <!-- WhatsApp -->
+                <a href="#" title="WhatsApp">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+                </a>
+
+                <!-- Twitter -->
+                <a href="#" title="Twitter">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3256/3256013.png" alt="Twitter">
+                </a>
+
+            </div>
+        </div>
+
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 BATIK SEMARANG. All rights reserved. Made with ❤️ in Indonesia</p>
+        </div>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="main.js"></script>
+</body>
+</html>
